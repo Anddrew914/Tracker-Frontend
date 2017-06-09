@@ -3,7 +3,7 @@
 module.exports = function (environment) {
   'use strict';
   var ENV = {
-    modulePrefix: 'free-lunch',
+    modulePrefix: 'Trakr',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
@@ -50,7 +50,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/free-lunch';
+    ENV.rootURL = '/Trakr';
     ENV.locationType = 'hash';
     ENV.apiHost = 'https://protected-fjord-91425.herokuapp.com/';
   }
