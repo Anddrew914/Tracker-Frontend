@@ -1,4 +1,4 @@
-import ENV from 'config/environment';
+import ENV from '/Users/andreweasterling/WDI/projects/Capstone/Tracker-Frontend/config/environment.js';
 import ActiveModelAdapter from 'active-model-adapter';
 import AjaxService from 'services/ember-ajax';
 import Ember from 'ember';
