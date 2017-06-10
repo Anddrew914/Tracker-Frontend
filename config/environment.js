@@ -52,7 +52,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/Trakr-Frontend';
     ENV.locationType = 'hash';
-    ENV.apiHost = 'https://powerful-bastion-50824.herokuapp.com/';
+    ENV.apiHost = 'https://powerful-bastion-50824.herokuapp.com';
   }
 
   return ENV
