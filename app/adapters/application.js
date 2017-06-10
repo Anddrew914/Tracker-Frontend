@@ -1,4 +1,4 @@
-import ENV from 'Trakr/config/environment';
+import ENV from 'Tracker-Frontend/config/environment';
 import ActiveModelAdapter from 'active-model-adapter';
 import AjaxService from 'services/ember-ajax';
 import Ember from 'ember';
