@@ -1,5 +1,7 @@
 
 {{!-- {{my-application signOut="signOut"}} --}}
 {{top-nav}}
-{{#link-to "dashboard"}}Dashboard{{/link-to}}
+<button>{{#link-to "dashboard"}}Dashboard{{/link-to}}</button>
+<button {{action 'getCoins'}}>Get coins</button>
+
 {{outlet}}

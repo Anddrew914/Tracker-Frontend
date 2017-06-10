@@ -93,21 +93,15 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Andrew Easterling <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Account <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                        </li>
+                      {{#if isAuthenticated}}
+                      <li class='dropdown-toggle'>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
+                      <li class='dropdown-toggle'><a href="#" {{action "signOut"}}>Sign Out</a></li>
+                      {{else}}
+                      <li class='dropdown-toggle'>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
+                      <li class='dropdown-toggle'>{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
+                      {{/if}}
                     </ul>
                 </li>
             </ul>
