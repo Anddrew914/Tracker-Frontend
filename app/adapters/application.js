@@ -1,11 +1,7 @@
 import ENV from 'Trakr/config/environment';
 import ActiveModelAdapter from 'active-model-adapter';
-import AjaxService from 'services/ember-ajax';
-import Ember from 'ember';
 
-export default AjaxService.extend({
-  host: ENV.apiHost
-});
+import Ember from 'ember';
 
 export default ActiveModelAdapter.extend({
   host: ENV.apiHost,
