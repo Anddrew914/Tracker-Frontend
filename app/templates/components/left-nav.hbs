@@ -1,11 +1,18 @@
 {{yield}}
 <ul class="nav navbar-nav side-nav">
+  {{!-- for each button with a rankNo below 12  --}}
+  {{!--  generate a button --}}
                     <li class="active">
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> {{crypto.vault.Data.BTC.Name}}</a>
                     </li>
+                    <div class='entry'>
                     <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
+                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i>
+asdf
+                           {{topTen}}
+                         </a>
                     </li>
+                  </div>
                     <li>
                         <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
                     </li>
