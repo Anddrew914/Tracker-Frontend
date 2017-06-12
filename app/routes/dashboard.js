@@ -8,6 +8,6 @@ export default Ember.Route.extend({
   crypto: storageFor('crypto'),
 
   model() {
-      return this.get('crypto.vault.Data.BTC.SortOrder')
+      return this.get('crypto.vault.Data')
     }
 });
