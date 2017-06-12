@@ -11,12 +11,17 @@ export default Ember.Service.extend({
     console.log("getCrypto");
     return this.get('ajax').request('https://www.cryptocompare.com/api/data/coinlist/')
     .then((response) => (this.get('crypto').set('vault', response)))
-    .then(() => console.log("crypto storage", this.get('crypto.vault.Data')))
+    .then(() => console.log("crypto storage", this.get('crypto.dummy')))
     .catch((res, rej) => console.log('get crypto error', rej));
-},
-   topTen() {
+}
+  //  topTen() {
+  //   let topTen = this.get('crypto.vault.Data')
+   //
+  //   for (SortOrder in topTen) {
+  //     if (SortOrder === 1)
+  //       console.log()
+  //   }
+   //
+  //   console.log("topTen", topTen);
 
-
-
-  }
 });
