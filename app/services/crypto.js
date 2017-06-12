@@ -11,17 +11,12 @@ export default Ember.Service.extend({
     console.log("getCrypto");
     return this.get('ajax').request('https://www.cryptocompare.com/api/data/coinlist/')
     .then((response) => (this.get('crypto').set('vault', response)))
-    .then(() => console.log("crypto storage", this.get('crypto.dummy')))
+    .then(() => console.log("crypto storage", this.get('crypto.vault.Data')))
     .catch((res, rej) => console.log('get crypto error', rej));
-}
-  //  topTen() {
-  //   let topTen = this.get('crypto.vault.Data')
-   //
-  //   for (SortOrder in topTen) {
-  //     if (SortOrder === 1)
-  //       console.log()
-  //   }
-   //
-  //   console.log("topTen", topTen);
+  },
 
+  sideBar() {
+    return this.get('ajax').request('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,XRP,DASH,XEM,XMR,NXT,ETC,REP&tsyms=USD,EUR')
+
+  }
 });

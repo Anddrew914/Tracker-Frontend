@@ -1,0 +1,5 @@
+#!/bin/bash
+
+curl --include --request GET "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,XRP,DASH,XEM,XMR,NXT,ETC,REP&tsyms=USD,EUR" \
+  --header "Content-Type: application/json" \
+  }

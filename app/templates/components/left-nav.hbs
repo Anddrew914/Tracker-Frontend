@@ -1,56 +1,54 @@
 {{yield}}
 <ul class="nav navbar-nav side-nav">
-  {{!-- for each button with a rankNo below 12  --}}
-  {{!--  generate a button --}}
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="index.html">{{coin.BTC.FullName}}<span class="badge">5</span></a>
-                    </li>
-                    <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> {{coin.ETH.FullName}} </a>
-                    </li>
+  <li>
+    <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+    <ul id="demo" class="collapse">
+      <li>
+        <a href="#">Dropdown Item</a>
+      </li>
+      <li>
+        <a href="#">Dropdown Item</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="#"  {{action 'addCoin' coin.BTC.Name}} >{{coin.BTC.FullName}}<span class="badge">5</span></a>
+  </li>
+  <li>
+    <a href="charts.html" {{action 'addCoin' coin.ETH.Name }} ><i class="fa fa-fw fa-bar-chart-o"></i> {{coin.ETH.FullName}} </a>
+  </li>
 
-                    <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> {{coin.LTC.FullName}} </a>
-                    </li>
-                    <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> {{coin.XRP.FullName}} </a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> {{coin.DASH.FullName}} </a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> {{coin.XEM.FullName}} </a>
-                    </li>
+  <li>
+    <a href="tables.html" {{action 'addCoin' coin.LTC.Name }} ><i class="fa fa-fw fa-table"></i> {{coin.LTC.FullName}} </a>
+  </li>
+  <li>
+    <a href="forms.html" {{action 'addCoin' coin.XRP.Name}} ><i class="fa fa-fw fa-edit"></i> {{coin.XRP.FullName}} </a>
+  </li>
+  <li>
+    <a href="bootstrap-elements.html" {{action 'addCoin' coin.DASH.Name}} ><i class="fa fa-fw fa-desktop"></i> {{coin.DASH.FullName}} </a>
+  </li>
+  <li>
+    <a href="bootstrap-grid.html" {{action 'addCoin' coin.XEM.Name}} ><i class="fa fa-fw fa-wrench"></i> {{coin.XEM.FullName}} </a>
+  </li>
 
-                    <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> {{coin.XMR.FullName}} </a>
-                    </li>
-                    <li>
-                        <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> {{coin.NXT.FullName}} </a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> {{coin.ETC.FullName}} </a>
-                    </li>
+  <li>
+    <a href="blank-page.html" {{action 'addCoin' coin.XMR.Name}} ><i class="fa fa-fw fa-file"></i> {{coin.XMR.FullName}} </a>
+  </li>
+  <li>
+    <a href="index-rtl.html" {{action 'addCoin' coin.NXT.Name}} ><i class="fa fa-fw fa-dashboard"></i> {{coin.NXT.FullName}} </a>
+  </li>
+  <li>
+    <a href="bootstrap-grid.html" {{action 'addCoin' coin.ETC.Name}} ><i class="fa fa-fw fa-wrench"></i> {{coin.ETC.FullName}} </a>
+  </li>
 
-                    <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> {{coin.REP.FullName}} </a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> {{coin.ETC.FullName}} </a>
-                    </li>
+  <li>
+    <a href="blank-page.html" {{action 'addCoin' coin.REP.Name}} ><i class="fa fa-fw fa-file"></i> {{coin.REP.FullName}} </a>
+  </li>
+  <li>
+    <a href="bootstrap-grid.html" {{action 'addCoin' coin.ETC.Name}} ><i class="fa fa-fw fa-wrench"></i> {{coin.ETC.FullName}} </a>
+  </li>
 
-                    <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> {{coin.REP.FullName}} </a>
-                    </li>
-                </ul>
+  <li>
+    <a href="blank-page.html" {{action 'addCoin' coin.REP.Name}} ><i class="fa fa-fw fa-file"></i> {{coin.REP.FullName}} </a>
+  </li>
+</ul>
