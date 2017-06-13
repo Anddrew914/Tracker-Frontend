@@ -13,43 +13,5 @@ As a user , before logging in I can see a sidebar with a selection of cyptrocurr
                               of personally track icons.
                               I can attach a note to my list of icons.
 
-                              Object
-                              Algorithm
-                              :
-                              "Scrypt"
-                              CoinName
-                              :
-                              "2BACCO Coin"
-                              FullName
-                              :
-                              "2BACCO Coin (2BACCO)"
-                              FullyPremined
-                              :
-                              "0"
-                              Id
-                              :
-                              "30912"
-                              ImageUrl
-                              :
-                              "/media/351869/2bacco.png"
-                              Name
-                              :
-                              "2BACCO"
-                              PreMinedValue
-                              :
-                              "9774545.4"
-                              ProofType
-                              :
-                              "PoW/PoS"
-                              SortOrder
-                              :
-                              "874"
-                              TotalCoinSupply
-                              :
-                              "81454545"
-                              TotalCoinsFreeFloat
-                              :
-                              "N/A"
-                              Url
-                              :
-                              "/coins/2bacco/overview"
+Wireframe: https://goo.gl/photos/4dg1CZKJqhjBsYMS9
+           https://goo.gl/photos/6xzDWbB13ncSzoN37
