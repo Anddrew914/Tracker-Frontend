@@ -9,9 +9,10 @@ export default Ember.Component.extend({
 
   actions: {
     addCoin (name) {
-      console.log('lev-nav.js addcoin', name)
+      console.log('left-nav.js addcoin()', name)
       this.get('crypto').set('coin', name)
-      console.log("to crypto storage coin from left-nav.js", this.get('crypto.coin'))
+      console.log("left-nav.js set(coin, name)", this.get('crypto.coin'))
+      console.log("left-nav.js this.sendAction('addCoin', name), goes to dashboard.hbs")
       return this.sendAction('addCoin', name)
     }
   }

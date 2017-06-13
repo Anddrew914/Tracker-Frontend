@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-3 col-md-2 sidebar">
-        {{left-nav coin=model}}
+        {{left-nav coin=model addCoin="addCoin"}}
       </div>
       <!-- Page Heading -->
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -21,12 +21,16 @@
         </ol>
 
 
-        <!-- /.row -->
+        <!-- /heading -->
 
-        <!-- /.row -->
 
-        <div class="row">
+        <!-- large coin icons go here -->
+        <div {{action 'addCoin'}} class="row large-coin-icons-div">
           <div class="col-lg-3 col-md-6">
+            {{large-icon coin=model}}
+          </div>
+
+          {{!-- <div class="col-lg-3 col-md-6">
             {{large-icon coin=model}}
           </div>
 
@@ -36,14 +40,12 @@
 
           <div class="col-lg-3 col-md-6">
             {{large-icon coin=model}}
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            {{large-icon coin=model}}
-          </div>
+          </div> --}}
         </div>
-        <!-- /.row -->
 
+        <!-- /large coin icons -->
+
+      <!-- charts go here -->
         <div class="row">
           <div class="col-lg-12">
             <div class="panel panel-default">
@@ -69,7 +71,9 @@
             </div>
           </div>
         </div>
-        <!-- /.row -->
+        <!-- /charts -->
+
+        <!-- extra data -->
 
         <div class="row">
           <div class="col-lg-4">
@@ -206,11 +210,14 @@
             </div>
           </div>
         </div>
-        <!-- /.row -->
+        <!-- /extra data -->
 
       </div>
-      <!-- /.container-fluid -->
+      <!-- /.container-fluid, main div-->
 
     </div>
+    <!-- sidebar div -->
   </div>
+  <!-- sidebar wrapper -->
 </div>
+<!-- page wrapper -->
