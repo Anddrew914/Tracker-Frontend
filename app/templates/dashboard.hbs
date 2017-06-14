@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-3 col-md-2 sidebar">
-        {{left-nav coin=model addCoin="addCoin"}}
+        {{left-nav coin=model.vault.Data addCoin="addCoin"}}
       </div>
       <!-- Page Heading -->
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -25,10 +25,14 @@
 
 
         <!-- large coin icons go here -->
+        <p>{{model.userCoin.FROMSYMBOL}}</p>
+
         <div {{action 'addCoin'}} class="row large-coin-icons-div">
           <div class="col-lg-3 col-md-6">
-            {{large-icon coin=model}}
+            {{large-icon icon=model.userCoin}}
           </div>
+
+
 
           {{!-- <div class="col-lg-3 col-md-6">
             {{large-icon coin=model}}
@@ -42,7 +46,6 @@
             {{large-icon coin=model}}
           </div> --}}
         </div>
-
         <!-- /large coin icons -->
 
       <!-- charts go here -->

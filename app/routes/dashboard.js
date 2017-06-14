@@ -8,15 +8,29 @@ export default Ember.Route.extend({
   crypto: storageFor('crypto'),
 
   model() {
-      return this.get('crypto.vault.Data')
+      return this.get('crypto')
     },
 
-  actions: {
-    addCoin(name) {
-      console.log('dashboard.js addCoin, sending ajax', this.get('name'))
-      return this.get('ajax').request(`https://www.cryptocompare.com/api/data/coinsnapshot/?fsym=${name}&tsym=USD`)
-      .then((res) => console.log("dashboard.js addCoin ajax call", res))
-      .catch((res, rej) => console.log(rej));
+      actions: {
+        addCoin(name) {
+          console.log('dashboard.js addCoin, sending ajax', name)
+          return this.get('ajax').request(`https://www.cryptocompare.com/api/data/coinsnapshot/?fsym=${name}&tsym=USD`)
+          .then((response) => this.get('store').createRecord('userCoin',
+          {
+            name: response.Data.AggregatedData.FROMSYMBOL,
+            price: 34,
+          }))
+          .then(() => console.log("dashboard.js this.store.createRecord(...)= ", this.store.peekAll('userCoin')))
+          .catch((res) => console.log('error', res))
   }
-}
+ }
 });
+// .then((response) => this.store.createRecord('user-coin',
+// {
+//   name: response.Data.AggregatedData.FROMSYMBOL
+//   price: response.Data.AggregatedData.PRICE
+// }))
+
+// .then((response) => (this.get('crypto').set('userCoin', response.Data.AggregatedData) ))
+// .then(() => console.log("this.get('crypto').set('userCoin',response))) usercoin= ", this.get('crypto.userCoin')))
+// .catch((res, rej) => console.log(rej))

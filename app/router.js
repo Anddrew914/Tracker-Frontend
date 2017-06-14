@@ -11,6 +11,7 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('dashboard');
+  this.route('userCoins');
 });
 
 export default Router;
