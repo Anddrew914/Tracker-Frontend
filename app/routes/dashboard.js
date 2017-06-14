@@ -19,7 +19,7 @@ export default Ember.Route.extend({
           {
             name: response.Data.AggregatedData.FROMSYMBOL,
             price: 34,
-          }))
+          }).save())
           .then(() => console.log("dashboard.js this.store.createRecord(...)= ", this.store.peekAll('userCoin')))
           .catch((res) => console.log('error', res))
   }

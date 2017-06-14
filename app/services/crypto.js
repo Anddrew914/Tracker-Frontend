@@ -6,7 +6,6 @@ export default Ember.Service.extend({
   ajax: Ember.inject.service(),
 
   crypto: storageFor('crypto'),
-
   getCrypto() {
     console.log("getCrypto");
     return this.get('ajax').request('https://www.cryptocompare.com/api/data/coinlist/')
