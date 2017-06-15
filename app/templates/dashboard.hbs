@@ -25,11 +25,11 @@
 
 
         <!-- large coin icons go here -->
-        <p>{{model.userCoin.FROMSYMBOL}}</p>
+        {{!-- <p>{{model.userCoin.FROMSYMBOL}}</p> --}}
 
         <div {{action 'addCoin'}} class="row large-coin-icons-div">
           <div class="col-lg-3 col-md-6">
-            {{large-icon icon=model.userCoin}}
+            {{large-icon coins=model}}
           </div>
 
 

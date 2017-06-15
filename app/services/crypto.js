@@ -17,5 +17,11 @@ export default Ember.Service.extend({
   sideBar() {
     return this.get('ajax').request('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,XRP,DASH,XEM,XMR,NXT,ETC,REP&tsyms=USD,EUR')
 
-  }
+  },
+
+  getIcon: function() {
+   const coins = this.get('store').findAll('userCoin')
+   console.log('inside large icon', coins)
+ }.on('init')
+
 });

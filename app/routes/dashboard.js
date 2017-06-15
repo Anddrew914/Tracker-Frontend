@@ -15,12 +15,12 @@ export default Ember.Route.extend({
         addCoin(name) {
           console.log('dashboard.js addCoin, sending ajax', name)
           return this.get('ajax').request(`https://www.cryptocompare.com/api/data/coinsnapshot/?fsym=${name}&tsym=USD`)
-          .then((response) => this.get('store').createRecord('user-coin',
+          .then((response) => this.get('store').createRecord('userCoin',
           {
             name: response.Data.AggregatedData.FROMSYMBOL,
             price: response.Data.AggregatedData.PRICE,
-          }).save())
-          .then(() => console.log("dashboard.js this.store.createRecord(...)= ", this.store.peekAll('userCoin')))
+          }))
+          .then(() => console.log("dashboard.js this.store.createRecord(...)= ", this.get('store').findAll('userCoin')))
           .catch((res) => console.log('dashboarderror', res))
   }
  }

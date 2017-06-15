@@ -5,6 +5,12 @@ export default Ember.Route.extend({
   flashMessages: Ember.inject.service(),
 
   actions: {
+
+    deleteCoinStore () {
+      this.get('store').destoyRecord('userCoin').save();
+      console.log("empty userCoin store", this.get('store')).peekAll('userCoin')
+    },
+
     signOut () {
       this.get('auth').signOut()
         .then(() => this.get('store').unloadAll())
