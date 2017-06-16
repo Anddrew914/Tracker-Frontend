@@ -1,6 +1,6 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('user-coin', 'Unit | Model | user coin', {
+moduleForModel('comment', 'Unit | Model | comment', {
   // Specify the other units that are required for this test.
   needs: []
 });
