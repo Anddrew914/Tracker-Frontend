@@ -1,15 +1,50 @@
-{{#link-to 'posts'}}Back to the posts list{{/link-to}}
-<h3>Post Show</h3>
+
+
+<!-- Title -->
 <h2>{{model.title}}</h2>
-<p>{{model.body}}</p>
-<div>
-  <strong>Comments( {{model.comments.length}} ):</strong>
+
+
+<hr>
+
+
+
+<hr>
+
+
+<!-- Post Content -->
+<p class="lead">{{model.body}}</p>
+
+<hr>
+
+<!-- Blog Comments -->
+<strong>Comments( {{model.comments.length}} ):</strong>
+{{#each model.comments as |comment|}}
+<div class="media">
+      <a class="pull-left" href="#">
+          <img class="media-object" src="http://placehold.it/64x64" alt="">
+      </a>
+      <div class="media-body">
+          <h4 class="media-heading">{{comment.author}} said:
+          </h4>
+          <p>{{comment.body}}</p>
+      </div>
+        <button {{action 'deleteComment' comment}}>Delete Comment</button>
+  </div>
+    {{/each}}
+    <div>{{#link-to 'post.comment.new'}}Add comment{{/link-to}}</div>
+    {{#link-to 'posts'}}Back to the posts list{{/link-to}}
+{{outlet "comments"}}
+      {{!-- <button {{action 'deleteComment' comment}}>Delete Comment</button> --}}
+{{!-- <div> --}}
+
+  {{!-- <strong>Comments( {{model.comments.length}} ):</strong>
   {{#each model.comments as |comment|}}
     <div>
-      <strong>{{comment.author}} said:</strong>
+      <strong></strong>
       <p>{{comment.body}}</p>
       <button {{action 'deleteComment' comment}}>Delete Comment</button>
     </div>
   {{/each}}
 </div>
 <div>{{#link-to 'post.comment.new'}}Add comment{{/link-to}}</div>
+{{#link-to 'posts'}}Back to the posts list{{/link-to}} --}}

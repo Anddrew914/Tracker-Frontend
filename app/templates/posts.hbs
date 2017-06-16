@@ -1,13 +1,15 @@
+
 <h3>Posts Index</h3>
-<ul>
+<ol>
   {{#each model as |post|}}
     <li>
       {{#link-to 'post' post}}
-        {{post.title}}
+      <h1>  {{post.title}} </h1>
       {{/link-to}}
-      <button {{action 'delete' post}}>Delete</button>
+      <button class="btn btn-default" {{action 'delete' post}}>Delete</button>
+        <button class="btn btn-default" {{action 'edit' post}}>Edit</button>
     </li>
   {{/each}}
-</ul>
-{{#link-to 'post.new'}}New Post{{/link-to}}
+</ol>
+<button class="btn btn-default">{{#link-to 'post.new'}}New Post{{/link-to}}</button>
 {{outlet}}
