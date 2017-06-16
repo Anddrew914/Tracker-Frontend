@@ -5,9 +5,11 @@
     <li>
       {{#link-to 'post' post}}
       <h1>  {{post.title}} </h1>
+      <p class="lead">{{post.body}}</p>
       {{/link-to}}
       <button class="btn btn-default" {{action 'delete' post}}>Delete</button>
-        <button class="btn btn-default" {{action 'edit' post}}>Edit</button>
+        <button class="btn btn-default">{{#link-to 'post.edit' post}}Edit{{/link-to}}</button>
+
     </li>
   {{/each}}
 </ol>

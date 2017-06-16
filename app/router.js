@@ -8,16 +8,20 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-    this.route('sign-up');
-    this.route('sign-in');
-    this.route('change-password');
-    this.route('users');
-    this.route('posts');
-    this.route('post.new', { path: 'posts/new' });
-    this.route('post', { path: 'posts/:post_id' }, function() {
-      this.route('comment.new', { path: 'comments/new' });
+  this.route('sign-up');
+  this.route('sign-in');
+  this.route('change-password');
+  this.route('users');
+  this.route('posts');
+  this.route('post.edit',{ path: 'posts/:post_id/edit'})
+  this.route('post.new', { path: 'posts/new' });
+  this.route('post', { path: 'posts/:post_id' }, function() {
+    this.route('comment.new', { path: 'comments/new' });
 
+    // this.route('edit');
   });
+
+  this.route('comment', function() {});
 });
 
 export default Router;

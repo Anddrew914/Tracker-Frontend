@@ -12,6 +12,7 @@ export default Ember.Route.extend({
     },
 
     signOut () {
+      console.log('application')
       this.get('auth').signOut()
         .then(() => this.get('store').unloadAll())
         .then(() => this.transitionTo('sign-in'))
