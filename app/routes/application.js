@@ -8,11 +8,11 @@ export default Ember.Route.extend({
 
     deleteCoinStore () {
       this.get('store').destoyRecord('userCoin').save();
-      console.log("empty userCoin store", this.get('store')).peekAll('userCoin')
+      console.log("empty userCoin store", this.get('store')).peekAll('userCoin');
     },
 
     signOut () {
-      console.log('application')
+      console.log('application');
       this.get('auth').signOut()
         .then(() => this.get('store').unloadAll())
         .then(() => this.transitionTo('sign-in'))
