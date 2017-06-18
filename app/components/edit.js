@@ -6,6 +6,7 @@ model: {},
 
 actions: {
   update () {
+    console.log('asdf')
     this.sendAction('update', this.get('model'));
   },
 

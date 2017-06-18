@@ -40,7 +40,18 @@ export default Ember.Service.extend({
       this.get('credentials').set('token', result.user.token);
     });
   },
-
+  update (id, title, body) {
+    let url = '/posts/' + id
+    console.log('auth', id, title, body)
+    return this.get('ajax').patch(url, {
+      data: {
+        post: {
+          body: body,
+          title: title,
+        },
+      },
+    });
+  },
   changePassword (passwords) {
     return this.get('ajax').patch(`/change-password/${this.get('credentials.id')}`, {
       data: {
