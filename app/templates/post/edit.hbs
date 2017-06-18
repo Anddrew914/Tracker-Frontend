@@ -1,0 +1,16 @@
+<h3>Edit</h3>
+<form>
+  <div>
+    <label>Title:</label>
+    {{input class='form-control' type="text" value=model.title}}
+  </div>
+  <div>
+    <label>Body:</label>
+    {{textarea class='form-control' rows="5" value=model.body}}
+  </div>
+
+  <div>
+    <button class="btn btn-primary"{{action 'save'}}>Save</button>
+    <button class="btn btn-primary"{{action 'cancel'}}>Cancel</button>
+  </div>
+</form>
