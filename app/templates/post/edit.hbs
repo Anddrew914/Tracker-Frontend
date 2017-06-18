@@ -1,4 +1,4 @@
-<h3>Edit Post</h3>
+<h3>Edit</h3>
 <form>
   <div>
     <label>Title:</label>
@@ -8,8 +8,9 @@
     <label>Body:</label>
     {{textarea class='form-control' rows="5" value=model.body}}
   </div>
+
   <div>
-    <button class="btn btn-primary"{{action 'update'}}>Update</button>
+    <button class="btn btn-primary"{{action 'update' model.id model.title model.body}}>Update</button>
     <button class="btn btn-primary"{{action 'cancel'}}>Cancel</button>
   </div>
 </form>

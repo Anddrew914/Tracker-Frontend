@@ -1,8 +1,7 @@
 
-
+{{log model}}
 <!-- Title -->
 <h2>{{model.title}}</h2>
-
 
 <hr>
 
@@ -28,6 +27,7 @@
           </h4>
           <p>{{comment.body}}</p>
       </div>
+
         <button {{action 'deleteComment' comment}}>Delete Comment</button>
   </div>
     {{/each}}

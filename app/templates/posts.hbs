@@ -1,17 +1,23 @@
-
 <h3>Posts Index</h3>
 <ol>
-  {{#each model as |post|}}
+  {{#each model.posts as |post|}}
+  {{log post.user_id}}
+  {{log model.users.id}}
     <li>
       {{#link-to 'post' post}}
-      <h1>  {{post.title}} </h1>
+      <h1>  {{post.title}}</h1>
       <p class="lead">{{post.body}}</p>
-      {{/link-to}}
-      <button class="btn btn-default" {{action 'delete' post}}>Delete</button>
-        <button class="btn btn-default">{{#link-to 'post.edit' post}}Edit{{/link-to}}</button>
 
+      {{/link-to}}
+      <div>
+        {{#if (eq model.users.id post.user_id)}}
+      <button class="btn btn-default" {{action 'delete' post}}>Delete</button>
+      <button class="btn btn-default">{{#link-to 'post.edit' post}}Edit{{/link-to}}</button>
+      {{/if}}
+      </div>
     </li>
   {{/each}}
 </ol>
 <button class="btn btn-default">{{#link-to 'post.new'}}New Post{{/link-to}}</button>
+
 {{outlet}}

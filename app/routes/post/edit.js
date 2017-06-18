@@ -1,13 +1,18 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  auth: Ember.inject.service(),
 
   actions: {
-    update() {
-      const newPost = this.get('store').findRecord('post', this.currentModel.id);
-      newPost.save().then((post) => {
-        this.transitionTo('post', post);
-      });
+
+    update(id,title, body) {
+      console.log(id, title, body)
+      this.get('auth').update(id, title, body)
+      .then(() => this.transitionTo('posts'))
+    },
+    cancel() {
+      this.transitionTo('posts');
+
     }
   }
 });

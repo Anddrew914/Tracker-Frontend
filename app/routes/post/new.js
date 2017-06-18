@@ -7,6 +7,7 @@ export default Ember.Route.extend({
   actions: {
     save() {
       const newPost = this.get('store').createRecord('post', this.currentModel);
+      console.log(newPost)
       newPost.save().then((post) => {
         this.transitionTo('post', post);
       });
