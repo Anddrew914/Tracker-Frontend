@@ -1,23 +1,35 @@
-<h3>Posts Index</h3>
+<h3 style = "margin-top: 3%;">Posts Index</h3>
+<button style = "float: right" >{{#link-to 'post.new'}}New Post{{/link-to}}</button>
+{{!-- <div class = "post-images">
+  <img src="assets/Posts.jpg" alt="" width="100%">
+</div> --}}
 <ol>
   {{#each model.posts as |post|}}
   {{log post.user_id}}
   {{log model.users.id}}
-    <li>
+  <div class='post-div'>
       {{#link-to 'post' post}}
       <h1>  {{post.title}}</h1>
+      <hr>
+      <hr>
       <p class="lead">{{post.body}}</p>
 
       {{/link-to}}
       <div>
         {{#if (eq model.users.id post.user_id)}}
-      <button class="btn btn-default" {{action 'delete' post}}>Delete</button>
-      <button class="btn btn-default">{{#link-to 'post.edit' post}}Edit{{/link-to}}</button>
+      <a {{action 'delete' post}}>Delete</a>
+      <a> {{#link-to 'post.edit' post}}Edit{{/link-to}}</a>
+      {{else}}
+      <span style='visibility: hidden;
+'>''</span>
       {{/if}}
       </div>
-    </li>
+  </div>
   {{/each}}
 </ol>
-<button class="btn btn-default">{{#link-to 'post.new'}}New Post{{/link-to}}</button>
+<div style='visibility: hidden;'>
+  ''
+</div>
+{{!-- <button class="btn btn-default">{{#link-to 'post.new'}}New Post{{/link-to}}</button> --}}
 
 {{outlet}}

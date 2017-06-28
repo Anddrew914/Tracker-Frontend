@@ -1,5 +1,6 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 /*!
  * Start Bootstrap - SB Admin (http://startbootstrap.com/)
@@ -11,7 +12,10 @@
 
 body {
     margin-top: 100px;
-    background-color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #054A91;
+    color: ivory;
+
 }
 
 @media(min-width:768px) {
@@ -46,10 +50,33 @@ body {
 }
 
 /* Top Navigation */
-
-.top-nav {
-    padding: 0 15px;
+.navbar {
+    // background-image: url("/assets/Postsa.png");
+    // background-size: cover;
+    background-color: #3E7CB1;
+    // padding: 26% 2% 2% 0 ;
+    color: ivory;
+    text-align: center;
+    box-shadow: 1px 1px 1px #F38C2E;
+    // height: 400px;
+    // margin: 0;
 }
+
+.page-header {
+  background-image: url("/assets/Postsa.png");
+  background-size: cover;
+  height: 400px;
+  border: 0;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+// .top-nav {
+//     background-image: linear-gradient(to bottom, #286090 0%, #337ab7 100%);
+//     padding: 0 15px;
+// }
 
 .top-nav>li {
     display: inline-block;
@@ -57,10 +84,10 @@ body {
 }
 
 .top-nav>li>a {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 50%;
+    padding-bottom: 0;
     line-height: 20px;
-    color: #999;
+    color: ivory;
 }
 
 .top-nav>li>a:hover,
@@ -69,7 +96,7 @@ body {
 .top-nav>.open>a:hover,
 .top-nav>.open>a:focus {
     color: #fff;
-    background-color: #000;
+    background-color: #286090;
 }
 
 .top-nav>.open>.dropdown-menu {
@@ -79,7 +106,7 @@ body {
     border: 1px solid rgba(0,0,0,.15);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    background-color: #fff;
+    background-color: #0D47A1;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }
@@ -170,6 +197,26 @@ ul.alert-dropdown {
 }
 
 /* Custom Colored Panels */
+.post-div {
+  float: left;
+  margin: 1% 3%;
+  padding: 1%;
+  background-color: #3E7CB1;
+  border: rgba(63, 127, 191, 0.7) solid;
+  // border-radius: 25px;
+  // border-width: 2px;
+  width: 90%;
+  box-shadow: 2px 2px 2px #000000;
+  h1 {
+    color: ivory;
+  }
+  p {
+    color: ivory;
+  }
+  a {
+    color: #F38C2E;
+  }
+}
 
 .huge {
     font-size: 40px;
